@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poker by BlueSky</title>
+  <style>
+    * {
+      user-select: none;
+      -webkit-user-select: none;
+      font-family: Arial;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 30em;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+<div id="app" style="text-align: center;">
+  <h1>Loading...</h1>
+  <h4 style="color: #666;" id="warning">&nbsp;</h4>
+</div>
+<script type="module">
+  import Generator from './js/Generator.js'
+  
+  Generator.hack(true)
+  
+  Generator
+      .generate(true)
+      .paint(document.getElementById('app'), 'replace')
+</script>
+<script>
+  setTimeout(() => {
+    const warning = document.getElementById('warning')
+    if (warning) {
+      warning.innerText = 'Please use latest Chrome to continue.'
+    }
+  }, 5000)
+</script>
+<link rel="preload" href="img/club.svg" as="image">
+<link rel="preload" href="img/diamond.svg" as="image">
+<link rel="preload" href="img/heart.svg" as="image">
+<link rel="preload" href="img/joker.svg" as="image">
+<link rel="preload" href="img/spade.svg" as="image">
+</body>
+</html>

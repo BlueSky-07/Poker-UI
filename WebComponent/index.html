@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poker By BlueSky</title>
+  <link rel="import" href="poker.html">
+  <style>
+    * {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .app {
+      margin: auto;
+      width: 90%;
+      padding: 3em;
+    }
+    
+    bs-poker {
+      margin: 1em;
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <bs-poker number="A" suit="heart"></bs-poker>
+  <bs-poker number="2" suit="heart"></bs-poker>
+  <bs-poker number="3" suit="heart"></bs-poker>
+  <bs-poker number="4" suit="heart"></bs-poker>
+  <bs-poker number="5" suit="heart"></bs-poker>
+  <bs-poker number="6" suit="heart"></bs-poker>
+  <bs-poker number="7" suit="heart"></bs-poker>
+  <bs-poker number="8" suit="heart"></bs-poker>
+  <bs-poker number="9" suit="heart"></bs-poker>
+  <bs-poker number="10" suit="heart"></bs-poker>
+  <bs-poker number="J" suit="heart"></bs-poker>
+  <bs-poker number="Q" suit="heart"></bs-poker>
+  <bs-poker number="K" suit="heart"></bs-poker>
+  
+  <bs-poker number="A" suit="diamond"></bs-poker>
+  <bs-poker number="2" suit="diamond"></bs-poker>
+  <bs-poker number="3" suit="diamond"></bs-poker>
+  <bs-poker number="4" suit="diamond"></bs-poker>
+  <bs-poker number="5" suit="diamond"></bs-poker>
+  <bs-poker number="6" suit="diamond"></bs-poker>
+  <bs-poker number="7" suit="diamond"></bs-poker>
+  <bs-poker number="8" suit="diamond"></bs-poker>
+  <bs-poker number="9" suit="diamond"></bs-poker>
+  <bs-poker number="10" suit="diamond"></bs-poker>
+  <bs-poker number="J" suit="diamond"></bs-poker>
+  <bs-poker number="Q" suit="diamond"></bs-poker>
+  <bs-poker number="K" suit="diamond"></bs-poker>
+  
+  <bs-poker number="A" suit="spade"></bs-poker>
+  <bs-poker number="2" suit="spade"></bs-poker>
+  <bs-poker number="3" suit="spade"></bs-poker>
+  <bs-poker number="4" suit="spade"></bs-poker>
+  <bs-poker number="5" suit="spade"></bs-poker>
+  <bs-poker number="6" suit="spade"></bs-poker>
+  <bs-poker number="7" suit="spade"></bs-poker>
+  <bs-poker number="8" suit="spade"></bs-poker>
+  <bs-poker number="9" suit="spade"></bs-poker>
+  <bs-poker number="10" suit="spade"></bs-poker>
+  <bs-poker number="J" suit="spade"></bs-poker>
+  <bs-poker number="Q" suit="spade"></bs-poker>
+  <bs-poker number="K" suit="spade"></bs-poker>
+  
+  <bs-poker number="A" suit="club"></bs-poker>
+  <bs-poker number="2" suit="club"></bs-poker>
+  <bs-poker number="3" suit="club"></bs-poker>
+  <bs-poker number="4" suit="club"></bs-poker>
+  <bs-poker number="5" suit="club"></bs-poker>
+  <bs-poker number="6" suit="club"></bs-poker>
+  <bs-poker number="7" suit="club"></bs-poker>
+  <bs-poker number="8" suit="club"></bs-poker>
+  <bs-poker number="9" suit="club"></bs-poker>
+  <bs-poker number="10" suit="club"></bs-poker>
+  <bs-poker number="J" suit="club"></bs-poker>
+  <bs-poker number="Q" suit="club"></bs-poker>
+  <bs-poker number="K" suit="club"></bs-poker>
+  
+  <bs-poker joker="0"></bs-poker>
+  <bs-poker joker="1"></bs-poker>
+</div>
+<script>
+  let z = 1
+  document.querySelectorAll('bs-poker').forEach(
+      poker => {
+        poker.addEventListener('click', e => {
+          poker.style.zIndex = z++
+        })
+      }
+  )
+</script>
+</body>
+</html>
