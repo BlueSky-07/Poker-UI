@@ -31,3 +31,8 @@ Poker-UI：一个可翻转的扑克牌组件样式
 >基于 Web Component 标准的设计，如需向下兼容可使用 [Web Component Polyfill](https://github.com/webcomponents/webcomponentsjs)
 
 *有关 Web Component 的介绍可查看：[https://developer.mozilla.org/zh-CN/docs/Web/Web_Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)*
+
+> 由于 Chrome 80 开始移除了 HTML Imports 支持，所以第二个实现已经看不到效果了，参考信息：
+>
+> [Can I use web component ?](https://caniuse.com/#search=web%20component)
+> [HTML Imports (removed)](https://www.chromestatus.com/feature/5144752345317376)
